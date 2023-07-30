@@ -594,6 +594,10 @@ video {
   top: 0px;
 }
 
+.top-8{
+  top: 2rem;
+}
+
 .z-40{
   z-index: 40;
 }
@@ -641,12 +645,12 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.font-playfair{
-  font-family: playfair Display, serif;
-}
-
 .font-opensans{
   font-family: Open Sans, sans-serif;
+}
+
+.font-playfair{
+  font-family: playfair Display, serif;
 }
 
 .text-3xl{
