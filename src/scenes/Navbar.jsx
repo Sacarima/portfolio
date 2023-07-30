@@ -16,7 +16,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 };
 
 const Navbar = ({ selectedPage, setSelectedPage }) => {
-    const [isMnuToggled, setIsMenuToggled] = useState(false);
+    const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
     return (
@@ -28,12 +28,39 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 {isAboveSmallScreens ? (
                     <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
                       <Link 
-                        page="HOME"
+                        page="Home"
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                      />
+                      <Link 
+                        page="Skills"
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                      />  
+                      <Link 
+                        page="Projects"
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                      />  
+                      <Link 
+                        page="Testimonials"
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                      />  
+                      <Link 
+                        page="Contact"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                       />  
                     </div>
-                ) : (<div></div>)}
+                ) : (
+                    <button
+                        className="rounded-full bg-red p-2"
+                        onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    >
+                        <img src="../assets/menu-icon.svg" alt="Menu" />
+                    </button>
+                )}
             </div>
         </nav>
     )
