@@ -15,12 +15,13 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     );
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
+    const navbarBackground = isTopOfPage ? "" : "bg-red";
 
     return (
-        <nav className={`z-40 w-full fixed top-0 py-6`}>
+        <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
                 <h4 className="font-playfair text-3xl font-bold">J.S.A</h4>
 
@@ -28,29 +29,29 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 {isAboveSmallScreens ? (
                     <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
                       <Link 
-                        page="Home"
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
+                            page="Home"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
                       />
                       <Link 
-                        page="Skills"
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
+                            page="Skills"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
                       />  
                       <Link 
-                        page="Projects"
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
+                            page="Projects"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
                       />  
                       <Link 
-                        page="Testimonials"
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
+                            page="Testimonials"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
                       />  
                       <Link 
-                        page="Contact"
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
+                            page="Contact"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
                       />  
                     </div>
                 ) : (
@@ -73,7 +74,33 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                         </div>
 
                         {/* MENU ITEMS */}
-                        
+                        <div className="flex flex-col gap-10 ml-[33%] text-2lx text-deep-blue">
+                            <Link 
+                                page="Home"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                                page="Skills"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />  
+                            <Link 
+                                page="Projects"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />  
+                            <Link 
+                                page="Testimonials"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />  
+                            <Link 
+                                page="Contact"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            /> 
+                        </div>
                     </div>
                 )}
             </div>
