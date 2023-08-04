@@ -9,6 +9,7 @@ module.exports = {
        red: "#DC4492",
        yellow: "#FDCC49",
        grey: "ededed",
+       verde: "#397792",
       "deep-blue": "#010026",
       // "deep-blue": "#1c2841",
        "dark-grey": "#757575",
@@ -18,7 +19,7 @@ module.exports = {
         "gradient-rainbow": 
           "linear-gradient(81.66deg, #00B5EE 7.21%, #FF454 45.05%, #FFBA00 78.07%)",
         "gradient-rainblue":
-          "linear-gradient(90deg, #00B5EE 14.53%, #FF454 69.36%, #FFBA00 117.73%)",
+          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
     }),
     fontFamily: {
       playfair: ["playfair Display", "serif"],
