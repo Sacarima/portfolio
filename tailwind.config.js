@@ -11,6 +11,7 @@ module.exports = {
        grey: "ededed",
        verde: "#397792",
       "deep-blue": "#010026",
+        hyper: "#2f3b54",
       // "deep-blue": "#1c2841",
        "dark-grey": "#757575",
        "opaque-black": "rgba(0,0,0,0.35)"
