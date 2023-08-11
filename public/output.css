@@ -689,6 +689,14 @@ video {
   display: none;
 }
 
+.h-0{
+  height: 0px;
+}
+
+.h-0\.5{
+  height: 0.125rem;
+}
+
 .h-3{
   height: 0.75rem;
 }
@@ -799,13 +807,12 @@ video {
   background-color: rgb(57 119 146 / var(--tw-bg-opacity));
 }
 
-.bg-hyper{
-  --tw-bg-opacity: 1;
-  background-color: rgb(47 59 84 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-rainblue{
   background-image: linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%);
+}
+
+.bg-gradient-rainbow{
+  background-image: linear-gradient(81.66deg, #00B5EE 7.21%, #FF454 45.05%, #FFBA00 78.07%);
 }
 
 .p-12{
