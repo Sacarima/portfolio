@@ -64,7 +64,7 @@ const Landing = ({setSelectedPage}) => {
                                 xs:before:content-brush before:absolute before:-left-[35px]
                                 before:-top-[120px] before:z-[-1]"
                             >
-                             Aleixo.
+                             Aleixo
                             </span>
                         </p>
                         <p className="text-4xl font-playfair z-10 text-center md:text-start opacity-60 mt-10">I build Things for the web.</p>
