@@ -2,6 +2,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import LineGradient from "../components/LineGradient";
 
 const Landing = ({setSelectedPage}) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
@@ -47,7 +48,7 @@ const Landing = ({setSelectedPage}) => {
 
                     {/* HEADINGS */}
                     <motion.div
-                        intitial="hidden"
+                        initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.5 }}
