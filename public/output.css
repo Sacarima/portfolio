@@ -763,6 +763,10 @@ video {
   height: 100%;
 }
 
+.h-64{
+  height: 16rem;
+}
+
 .max-h-\[400px\]{
   max-height: 400px;
 }
@@ -1074,6 +1078,10 @@ video {
 
 .font-\[200\]{
   font-weight: 200;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
 
 .text-amarelo{
