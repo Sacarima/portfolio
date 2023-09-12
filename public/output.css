@@ -863,6 +863,10 @@ video {
   gap: 1.75rem;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -1397,6 +1401,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
 
   .md\:max-w-\[600px\]{
     max-width: 600px;
+  }
+
+  .md\:max-w-\[650px\]{
+    max-width: 650px;
+  }
+
+  .md\:max-w-\[500px\]{
+    max-width: 500px;
+  }
+
+  .md\:max-w-\[550px\]{
+    max-width: 550px;
   }
 
   .md\:items-center{

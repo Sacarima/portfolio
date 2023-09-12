@@ -29,7 +29,7 @@ const Landing = ({setSelectedPage}) => {
                             <img 
                             src="assets/one--2.png" 
                             className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full
-                                max-w[400px] md:max-w-[600px]"
+                                max-w[400px] md:max-w-[550px]"
                             alt="profile" />
                         </div>
                      </div>
@@ -68,11 +68,11 @@ const Landing = ({setSelectedPage}) => {
                              Aleixo
                             </span>
                         </p>
-                        <p className="text-4xl font-playfair z-10 text-center md:text-start opacity-60 mt-10">I build Things for the web.</p>
+                        <p className="text-4xl font-playfair z-10 text-center md:text-start opacity-60 mt-10">I build Things for the web</p>
 
                         <p className="mt-5 mb-7 text-sm text-center md:text-start opacity-60">
                             I'm a software engineer specializing in building exceptional digital experiences. 
-                            Currently, I'm focued on building accessible, human-centered propducts.
+                            Currently, I'm focused on building accessible, human-centered propducts.
                         </p>
                     </motion.div>
 
