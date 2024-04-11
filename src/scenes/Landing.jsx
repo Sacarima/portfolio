@@ -3,6 +3,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import LineGradient from "../components/LineGradient";
+import { TypeAnimation } from "react-type-animation";
 
 const Landing = ({setSelectedPage}) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
@@ -14,29 +15,21 @@ const Landing = ({setSelectedPage}) => {
         >
             
             {/* IMAGE SECTION */}
-            <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
+            <div className="md:order-2 flex justify-between basis-3/5 z-10 mt-8 md:mt-32">
                 {isAboveMediumScreens ? (
-                     <div
-                        className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-30
-                        before:rounded-t-300px] before:w-full before:max-w-[600px] before:h-full
-                        before:border-2 before:border-verde before:z-[-1] "
-                     >
-                        <div
-                             className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 
-                             before:rounded-t-300px] before:w-full before:max-w-[600px] before:h-full
-                             before:border-2 before:border-verde before:z-[-1] "
-                        >
+                     
+                        
                             <img 
-                            src="assets/one--2.png" 
-                            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full
-                                max-w[400px] md:max-w-[550px]"
+                            src="assets/wwww.png" 
+                            className=" transition duration-500  w-[79%] block z-10
+                                max-w[400px] md:max-w-[850px] ml-24"
                             alt="profile" />
-                        </div>
-                     </div>
+                        
+                     
                 ) : (
                     <img 
-                        src="assets/one--2.png" 
-                        className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full
+                        src="assets/wwww.png" 
+                        className=" transition duration-500 z-10 w-full
                             max-w[400px] md:max-w-[600px]"
                         alt="profile" 
                     />
@@ -57,20 +50,20 @@ const Landing = ({setSelectedPage}) => {
                             visible: { opacity: 1, x: 0 },
                         }}
                     >
-                        <p className="mt-10 mb-7 text-sm text-center md:text-start text-blue">Hi, my name is</p>
-                        <p className="text-6xl font-playfair z-10 text-center md:text-start">
+                        <p className="mt-10 mb-7 text-sm text-center md:text-start text-gray-100">Hi, my name is</p>
+                        <p className="text-3xl md:text-6xl font-playfair z-10 text-center md:text-start drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                             João {""}
                             <span 
-                                className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-                                xs:before:content-brush before:absolute before:-left-[35px]
-                                before:-top-[120px] before:z-[-1]"
+                                // className="xs:relative xs:text-deep-blue xs:font-semibold z-20
+                                // xs:before:content-brush before:absolute before:-left-[35px]
+                                // before:-top-[120px] before:z-[-1]"
                             >
-                             Aleixo
+                             S. Aleixo
                             </span>
                         </p>
-                        <p className="text-4xl font-playfair z-10 text-center md:text-start opacity-60 mt-10">I build Things for the web</p>
+                        <p className="text-3xl md:text-4xl font-playfair z-10 text-center md:text-start opacity-60 mt-6">I build Things for the web</p>
 
-                        <p className="mt-5 mb-7 text-sm text-center md:text-start opacity-60">
+                        <p className="mt-4 mb-7 text-lg font-thin text-center md:text-start opacity-60">
                             I'm a software engineer specializing in building exceptional digital experiences. 
                             Currently, I'm focused on building accessible, human-centered propducts.
                         </p>
@@ -89,7 +82,7 @@ const Landing = ({setSelectedPage}) => {
                         }}
                     >
                         <AnchorLink
-                            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+                            className="bg-Green text-deep-blue rounded-sm py-3 px-7 font-semibold
                             hover:bg-blue hover:text-white transition duration-500"
                             onClick={() => setSelectedPage("contact")}
                             href="#contact"
@@ -97,12 +90,12 @@ const Landing = ({setSelectedPage}) => {
                             Contact Me
                         </AnchorLink>
                         <AnchorLink
-                            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
+                            className="rounded-r-sm bg-Green py-0.5 pr-0.5"
                             onClick={() => setSelectedPage("contact")}
                             href="#contact"
                         >
                             <div
-                                className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center
+                                className="bg-[darkslategray] hover:text-opacity-50   transition duration-500 w-full h-full flex items-center
                                 justify-center font-playfair px-10"
                             >
                                 Let's Talk

@@ -9,11 +9,28 @@ import lineGradient from "./components/LineGradient";
 import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery"
 import LineGradient from "./components/LineGradient";
+import SocialMediaIcons from "./components/SocialMediaIcons";
+import MouseEffectComponent from "./components/MouseEffectComponent";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home") // this will determine what part of the navigation on the wesite we are yet!
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isTopOfPage, setItopOfPage] = useState(true);
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+
+  {/* Mouse effect */}
+  const handleMouseMove = (e) => {
+    setPosition({
+        x: e.clientX,
+        y: e.clientY
+    })
+  }
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => window.removeEventListener("mousemove", handleMouseMove)
+
+  }, [])
+
 
   {/* sticky background-color on scroll */}
    useEffect(() => {
@@ -27,36 +44,50 @@ function App() {
    {/**************************** */}
 
   return (
-    <div className="app bg-deep-blue">
-      <Navbar 
-        selectedPage={selectedPage} 
-        setSelectedPage={setSelectedPage} 
-        isTopOfPage={isTopOfPage}
-        />
-        {/* Dot group side menu scroll */}
-        <div className="w-5/6 mx-auto md:h-full">
-            {isAboveMediumScreens && (
-              <DotGroup 
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-            )}
-            <Landing setSelectedPage={setSelectedPage} />
+    <div 
+      className="app min-h-screen"
+      style={{
+        height: '100vh',
+        position: 'relative',
+      
+      }}
+      >
+      <div>
+        
+          <Navbar
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+            isTopOfPage={isTopOfPage}
+            />
+            {/* Dot group side menu scroll */}
+            <div className="w-5/6 mx-auto md:h-full">
+                {isAboveMediumScreens && (
+                  <DotGroup
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+          
+                )}
+                <Landing setSelectedPage={setSelectedPage} />
+            </div>
+            
+            <LineGradient />
+            
+            <div className="w-5/6 mx-auto">
+                  <MySkills />
+            </div>
+            <LineGradient />
+            <div className="w-5/6 mx-auto">
+                  <Projects />
+            </div>
+            <LineGradient />
+            <div className="w-5/6 mx-auto">
+                  <Contact />
+            </div>
+            <Footer />
         </div>
-        <LineGradient />
-        <div className="w-5/6 mx-auto">
-              <MySkills />
-        </div>
-        <LineGradient /> 
-        <div className="w-5/6 mx-auto">
-              <Projects />
-        </div>
-        <LineGradient /> 
-        <div className="w-5/6 mx-auto">
-              <Contact />
-        </div>
-        <Footer />
-    </div>
+      </div>
+    
   );
 }
 

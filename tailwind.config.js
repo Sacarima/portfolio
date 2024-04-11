@@ -17,6 +17,14 @@ module.exports = {
        amarelo: "#ffcc66",
        grey: "ededed",
        verde: "#397792",
+       Navy:	'#0a192f',
+      'Light-Navy':	'#112240',
+      'Lightest-Navy':	'#233554',
+      Slate:	'#8892b0',
+      'Light-Slate': '#a8b2d1',
+      'Lightest-Slate': '#ccd6f6',
+      White:	'#e6f1ff',
+      Green:	"#64ffda",
       "deep-blue": "#010026",
         hyper: "#2f3b54",
       // "deep-blue": "#1c2841",
@@ -48,3 +56,5 @@ module.exports = {
   }, 
   plugins: [],
 }
+
+
